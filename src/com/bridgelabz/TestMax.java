@@ -6,7 +6,7 @@ public class TestMax {
 	public static void main(String[] args) {                                                  //main method to find maximum
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
-		Maximum max = new Maximum();
+		Maximum max;
 		System.out.println("---------Find Maximum-------- ");
 		
 		while(true) {                                                                         // asking user to select the generic type
@@ -25,7 +25,8 @@ public class TestMax {
 				
 				System.out.print(" Please enter the third Integer value: ");
 				Integer third = scan.nextInt();
-				max.GenMax(first, second, third);
+				max = new Maximum<Integer>(first, second, third);                             //creating object 
+				max.GenMax();                                                                 //calling method
 				break;
 			}				
 			case 2:
@@ -38,7 +39,8 @@ public class TestMax {
 				
 				System.out.print(" Please enter the third float value: ");
 				Float third = scan.nextFloat();
-				max.GenMax(first, second, third);
+				max = new Maximum<Float>(first, second, third);
+				max.GenMax();
 				break;
 			}
 			case 3:
@@ -51,7 +53,8 @@ public class TestMax {
 				
 				System.out.print(" Please enter the third string: ");
 				String third = scan.next();
-				max.GenMax(first, second, third);
+				max = new Maximum<String>(first, second, third);
+				max.GenMax();
 				break;
 			}
 			case 4:

@@ -1,6 +1,21 @@
 package com.bridgelabz;
 
-public class Maximum {
+public class Maximum <T extends Comparable<T>> {
+	
+	T first;                                                                       //creating variable of generic type
+	T second;
+	T third;
+	
+	public Maximum(T first, T second, T third) {                                   // constructor of generic type
+		super();
+		this.first = first;
+		this.second = second;
+		this.third = third;
+	}
+	
+	public void GenMax() {                                 
+		GenMax(this.first, this.second, this.third);
+	}
 
 	public <T extends Comparable<T>> void GenMax(T first, T second, T third) {     //using generic type T and making the method generic.
 			T max = first;                                      //considering first is max and assigning max to first
